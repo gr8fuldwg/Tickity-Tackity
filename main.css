@@ -20,12 +20,28 @@ body {
     justify-content: center;
 }
 
-.justify-content-spac-evenly {
+.justify-content-space-evenly {
     justify-content: space-evenly;
 }
 
 .align-items-center  {
-    align-content: center;
+    align-items: center;
+}
+
+.justify-content-flex-end{
+    justify-content: flex-end;
+}
+.justify-content-flex-start{
+    justify-content: flex-start;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.px-6 {
+    padding-left: 6rem;
+    padding-right: 6rem;
 }
 
 .controls {}
@@ -62,4 +78,25 @@ body {
 
 .w30 {
     width: 30%;
+}
+
+.h-4 {
+    height: 4rem;
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.br-none {
+    border-right: none;
+}
+.bl-none {
+    border-left: none;
+}
+.bb-none {
+    border-bottom: none;
+}
+.bt-none {
+    border-top: none;
 }
