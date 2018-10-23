@@ -6,5 +6,60 @@
 }
 
 body {
-    background-color: green;
+    background-color: white;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+.d-flex {
+    display: flex;
+}
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-spac-evenly {
+    justify-content: space-evenly;
+}
+
+.align-items-center  {
+    align-content: center;
+}
+
+.controls {}
+.turn {}
+.board {
+   
+}
+.row {}
+.cell {
+    border: 1px solid black;
+}
+
+.btn {}
+
+.h100 {
+    height: 100%;
+}
+
+.h90 {
+    height: 90%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.h30 {
+    height: 30%;
+}
+
+.w30 {
+    width: 30%;
 }
