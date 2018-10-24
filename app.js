@@ -2,20 +2,31 @@
 // variables
 const board = document.querySelector('.board');
 const cells = board.querySelectorAll('.cell');
-const turnDisplay = document.querySelector('.turn');
+const turnDisplay = document.querySelector('.turn span');
 const controls = document.querySelector('.control');
 let currentPlayer = 'X';
 let gameOver = false;
 
 // events
 cells.forEach(function attachCellListener(cell){
-    console.log(cell)
+   
     cell.addEventListener('click',  onCellClick); 
 });
 // functions
 function onCellClick(event) {
-    const elemtn =event.target;
-    elemtn.textContent = currentPlayer;
+    const element =event.target;
+    if(element.beenClicked){
+        return;
+    }
+    element.beenClicked = true;
+    element.textContent = currentPlayer;
     currentPlayer = currentPlayer === 'X' ? 'O': 'X';
+    renderTurn();
+
+}
+
+function renderTurn() {
+    turnDisplay.textContent = currentPlayer;
 }
 // kick it off
+renderTurn();
