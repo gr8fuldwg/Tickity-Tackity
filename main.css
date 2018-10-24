@@ -52,6 +52,10 @@ body {
 .row {}
 .cell {
     border: 1px solid black;
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {}
