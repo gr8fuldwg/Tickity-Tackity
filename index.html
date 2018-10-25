@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,18 @@
     <title>Tickity Tackity</title>
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <div class="container">
         <header class="d-flex justify-content-center align-items-center h-4">
             <h1 class="title">Tickity Tackity</h1>
         </header>
         <main class="d-flex justify-content-center align-items-center h90 w100">
-            <section class="board h100 w90">
-                <div class="row d-flex h30 justify-content-center">
-                    <div class="cell h100 w30 bl-none bt-none"></div>
-                    <div class="cell h100 w30 bt-none"></div>
-                    <div class="cell h100 w30 bt-none br-none"></div>
-                </div>
-                <div class="row d-flex h30 justify-content-center">
-                    <div class="cell h100 w30 bl-none"></div>
-                    <div class="cell h100 w30"></div>
-                    <div class="cell h100 w30 br-none"></div>
-                </div>
-                <div class="row d-flex h30 justify-content-center">
-                    <div class="cell h100 w30 bl-none bb-none"></div>
-                    <div class="cell h100 w30 bb-none"></div>
-                    <div class="cell h100 w30 bb-none br-none"></div>
-                </div>
+            <section class="board h100 w90 d-flex flex-wrap align-content-start">
+                
+                
             </section>
-        </main> 
+        </main>
         <footer class="d-flex justify-content-space-evenly px-6">
             <section class="turn d-flex -justify-content-flex-start flex-grow-1">
                 <h2>Turn: <span></span></h2>
@@ -42,4 +31,5 @@
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
