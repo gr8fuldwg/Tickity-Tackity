@@ -6,6 +6,7 @@ const controls = document.querySelector('.controls');
 let resetBtn = controls.querySelector('button');
 let currentPlayer = 'X';
 let gameOver = false;
+let moveCount = 0;
 let grid = makeGrid();
 const wins = [
     [0, 4, 8],
@@ -52,19 +53,19 @@ function onCellClick(event) {
     gameOver = checkForWin();
     // switch player
     if(!gameOver){
-    currentPlayer = currentPlayer === 'X' ? 'O': 'X';
+      currentPlayer = currentPlayer === 'X' ? 'O': 'X';
     }
     // render
     renderTurn();
     render();
 }
-function checkForwin() {
+function checkForWin() {
     for(let i = 0; i < wins.length; i += 1){
         const combo = wins[i];
         const selection = combo.map(function getGridCell(n) {
             return grid[n].textContent;
         });
-        const allTheSame = selection.every(function sameAsCurrentPlayer(char){
+        const allTheSame = selection.every(function sameAsCurrentPlayer(char) {
             return char === currentPlayer;
         });
         if(allTheSame){
@@ -89,15 +90,15 @@ function reset(event) {
 
 function makeGrid(){
     return [
-    Cell(`<div class="cell h30 w30 bl-none bt-none data-index="0""></div>`), 
-    Cell(`<div class="cell h30 w30 bt-none data-index="1""></div>`),
-    Cell(`<div class="cell h30 w30 bt-none br-none data-index="2""></div>`),
-    Cell(`<div class="cell h30 w30 bl-none data-index="3""></div>`),
-    Cell(`<div class="cell h30 w30 data-index="4""></div>`),
-    Cell(`<div class="cell h30 w30 br-none data-index="5""></div>`),
-    Cell(`<div class="cell h30 w30 bl-none bb-none data-index="6""></div>`),
-    Cell(`<div class="cell h30 w30 bb-none data-index="7""></div>`),
-    Cell(`<div class="cell h30 w30 bb-none br-none data-index="8""></div>`),
+    Cell(`<div class="cell h30 w30 bl-none bt-none" data-index="0"></div>`), 
+    Cell(`<div class="cell h30 w30 bt-none" data-index="1"></div>`),
+    Cell(`<div class="cell h30 w30 bt-none br-none" data-index="2"></div>`),
+    Cell(`<div class="cell h30 w30 bl-none" data-index="3"></div>`),
+    Cell(`<div class="cell h30 w30" data-index="4"></div>`),
+    Cell(`<div class="cell h30 w30 br-none" data-index="5"></div>`),
+    Cell(`<div class="cell h30 w30 bl-none bb-none" data-index="6"></div>`),
+    Cell(`<div class="cell h30 w30 bb-none" data-index="7"></div>`),
+    Cell(`<div class="cell h30 w30 bb-none br-none" data-index="8"></div>`),
     ];
 }
 function renderTurn() {
